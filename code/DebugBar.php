@@ -507,7 +507,7 @@ class DebugBar
             return false;
         }
         if (isset($_SERVER['REMOTE_ADDR'])) {
-            return !in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1', '1', '72.14.201.44']);
+            return !in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1', '1', '72.14.201.44', '72.14.201.117', '82.139.103.234', '172.18.0.1']);
         }
         return false;
     }
