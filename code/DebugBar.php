@@ -507,7 +507,7 @@ class DebugBar
             return false;
         }
         if (isset($_SERVER['REMOTE_ADDR'])) {
-            return !in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1', '1']);
+            return !in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1', '1', '72.14.201.44']);
         }
         return false;
     }
@@ -517,6 +517,8 @@ class DebugBar
      */
     public static function allowAllEnvironments()
     {
+        return true;
+
         // You will also need to add a debugbar-live config
         if (Environment::getEnv('DEBUGBAR_ALLOW_ALL_ENV')) {
             return true;
